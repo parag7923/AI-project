@@ -5,6 +5,7 @@ python-dotenv
 
 # Streamlit
 streamlit
+requests
 
 # Hugging Face Transformers
 transformers
