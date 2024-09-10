@@ -1,17 +1,7 @@
-# Flask and related packages
-Flask
-Flask-Cors
+flask
+flask-cors
 python-dotenv
-
-# Streamlit
-streamlit
-requests
-
-# Hugging Face Transformers
+gunicorn
 transformers
-
-# Spotipy (for Spotify API)
+torch 
 spotipy
-
-# Requests (for making HTTP requests from Streamlit)
-requests

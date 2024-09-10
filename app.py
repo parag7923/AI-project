@@ -36,7 +36,7 @@ def detect_emotion(text):
         print(f"Error detecting emotion: {e}")
         return "unknown"
 
-# Function to search for Spotify playlists based on a keyword
+# Function to search for Spotify playlists based on a emotion tags
 def find_playlists_for_keyword(keyword, limit=10):
     try:
         # Generate random queries to get diverse playlists
@@ -56,15 +56,32 @@ def find_playlists_for_keyword(keyword, limit=10):
 # Function to find playlists based on emotion
 def find_playlists_for_emotion(emotion, limit=10):
     emotion_to_query = {
-        "joy": "happy",
-        "anger": "angry",
-        "fear": "fearful",
-        "sadness": "sad",
-        "surprise": "surprised",
-        "disgust": "disgusted",
-        "unknown": "mood"
+    "joy": "happy",
+    "anger": "angry",
+    "fear": "fearful",
+    "sadness": "sad",
+    "surprise": "surprised",
+    "disgust": "disgusted",
+    "trust": "trusting",
+    "anticipation": "anticipating",
+    "sadness": "melancholic",
+    "boredom": "bored",
+    "frustration": "frustrated",
+    "confusion": "confused",
+    "excitement": "excited",
+    "contentment": "content",
+    "relief": "relieved",
+    "nostalgia": "nostalgic",
+    "pride": "proud",
+    "guilt": "guilty",
+    "shame": "ashamed",
+    "embarrassment": "embarrassed",
+    "hope": "hopeful",
+    "unknown": "mood",
+    "mixed": "mixed emotions",
+    "indifference": "indifferent"
     }
-    
+
     query = emotion_to_query.get(emotion, "mood")
     
     try:
