@@ -5,20 +5,27 @@ services:
     build:
       context: .
       dockerfile: Dockerfile_backend
+    container_name: emotion_music_backend
     ports:
       - "5000:5000"
-    container_name: music_backend
-    environment:
-      - FLASK_ENV=development
+    env_file:
+      - .env
+    networks:
+      - app-network
 
   frontend:
     build:
       context: .
       dockerfile: Dockerfile_frontend
+    container_name: emotion_music_frontend
     ports:
       - "8501:8501"
-    container_name: music_frontend
     depends_on:
       - backend
-    environment:
-      - STREAMLIT_SERVER_PORT=8501
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
